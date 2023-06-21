@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Screen & Webcam Recorder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    #popupContainer {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    #controls button,
+    #annotationControls button,
+    #otherControls button,
+    #settingsControls button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    #controls button:disabled,
+    #annotationControls button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    #countdownContainer {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="popupContainer">
+    <h1>Screen & Webcam Recorder</h1>
+    <div id="controls">
+      <button id="startButton">Start Recording</button>
+      <button id="pauseButton" disabled>Pause Recording</button>
+      <button id="stopButton" disabled>Stop Recording</button>
+    </div>
+    <div id="annotationControls">
+      <button id="startAnnotationButton">Start Annotation</button>
+      <button id="stopAnnotationButton" disabled>Stop Annotation</button>
+    </div>
+    <div id="otherControls">
+      <button id="trimButton">Trim & Edit</button>
+      <button id="shareButton">Share</button>
+      <button id="exportButton">Export</button>
+    </div>
+    <div id="settingsControls">
+      <button id="settingsButton">Settings</button>
+      <button id="preferencesButton">Preferences</button>
+      <button id="privacyButton">Privacy</button>
+      <button id="securityButton">Security</button>
+    </div>
+    <div id="countdownContainer">
+      <span id="countdownText">00:00:00</span>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

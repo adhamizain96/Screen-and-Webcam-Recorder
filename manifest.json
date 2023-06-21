@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Screen & Webcam Recorder",
+  "version": "1.0",
+  "description": "Record your screen and webcam.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "content.js",
+        "countdown.js",
+        "annotation.js",
+        "trim.js",
+        "export.js"
+      ],
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "icon.png"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
